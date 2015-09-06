@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DbProject</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4a11b4ef-9d94-4dbc-a063-ea913a2ce867}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DbProject</RootNamespace>
+    <AssemblyName>DbProject</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Accounts.sql" />
+    <Build Include="dbo\Tables\BudgetItems.sql" />
+    <Build Include="dbo\Tables\Categories.sql" />
+    <Build Include="dbo\Tables\Households.sql" />
+    <Build Include="dbo\Tables\Invitations.sql" />
+    <Build Include="dbo\Tables\AspNetRoles.sql" />
+    <Build Include="dbo\Tables\AspNetUserRoles.sql" />
+    <Build Include="dbo\Tables\Transactions.sql" />
+    <Build Include="dbo\Tables\AspNetUsers.sql" />
+    <Build Include="dbo\Tables\AspNetUserClaims.sql" />
+    <Build Include="dbo\Tables\AspNetUserLogins.sql" />
+    <Build Include="dbo\Tables\__MigrationHistory.sql" />
+    <Build Include="dbo\Test.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllTransactions.sql" />
+    <Build Include="dbo\Stored Procedures\GetBalance.sql" />
+    <Build Include="dbo\Stored Procedures\GetHouseholds.sql" />
+    <Build Include="dbo\Stored Procedures\GetTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateSetAccountBal.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateBudgetMonths.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateBudgetDefaultAmt.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAccountInfo.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateAccountBal.sql" />
+    <Build Include="dbo\Stored Procedures\RemoveTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\RemoveBudgetItem.sql" />
+    <Build Include="dbo\Stored Procedures\RemoveBankAccount.sql" />
+    <Build Include="dbo\Stored Procedures\ReconcileTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\LeaveHousehold.sql" />
+    <Build Include="dbo\Stored Procedures\JoinHousehold.sql" />
+    <Build Include="dbo\Stored Procedures\InvitationSent.sql" />
+    <Build Include="dbo\Stored Procedures\InvitationAccepted.sql" />
+    <Build Include="dbo\Stored Procedures\GetTransactionsByBudget.sql" />
+    <Build Include="dbo\Stored Procedures\GetHouseholdUsers.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllBudgets.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllAccounts.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccountInfo.sql" />
+    <Build Include="dbo\Stored Procedures\CreateTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\CreateHousehold.sql" />
+    <Build Include="dbo\Stored Procedures\CreateBudgetItem.sql" />
+    <Build Include="dbo\Stored Procedures\CreateBankAccount.sql" />
+  </ItemGroup>
+</Project>

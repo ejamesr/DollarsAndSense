@@ -1,0 +1,69 @@
+﻿@model DollarsAndSense.ModelViews.TestAccountsModel
+
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Various Tests</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="portlet">
+                <form action="/Account/Add" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>StoredProc: AddBankAccount</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("Name", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("RecBal", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.ReconciledBalance, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ReconciledBalance, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("CkBal", new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CheckbookBalance, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.CheckbookBalance, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Add" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- Test Households -->
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

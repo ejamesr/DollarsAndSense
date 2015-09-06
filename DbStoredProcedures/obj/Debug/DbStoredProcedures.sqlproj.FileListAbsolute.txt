@@ -1,0 +1,5 @@
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbStoredProcedures\bin\Debug\DbStoredProcedures.dacpac
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbStoredProcedures\bin\Debug\DbStoredProcedures.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbStoredProcedures\bin\Debug\DbStoredProcedures.pdb
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbStoredProcedures\obj\Debug\DbStoredProcedures.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbStoredProcedures\obj\Debug\DbStoredProcedures.pdb

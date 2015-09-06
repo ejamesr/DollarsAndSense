@@ -1,0 +1,9 @@
+﻿.portlet {
+    background-color: lightgray;
+    border-radius: 10px;
+    margin:4px;
+    padding: 7px;
+}
+.col-xs-4 {
+    padding: 2px;
+}

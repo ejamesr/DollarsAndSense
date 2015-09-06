@@ -1,0 +1,3 @@
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbProject\bin\Debug\DbProject.dacpac
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbProject\obj\Debug\DbProject.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DbProject\obj\Debug\DbProject.pdb
