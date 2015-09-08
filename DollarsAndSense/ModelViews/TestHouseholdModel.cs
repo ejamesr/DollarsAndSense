@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace DollarsAndSense.ModelViews
 {
@@ -15,5 +16,6 @@ namespace DollarsAndSense.ModelViews
         public string Name { get; set; }
         public string Email { get; set; }
         public string UserId { get; set; }
+        public SelectList Households { get; set; }
     }
 }

@@ -8,41 +8,7 @@
 
 <div class="container">
     <div class="row">
-            <div class="col-xs-4">
-                <div class="portlet">
-                    <form action="/Household/Join" method="post">
-                        @Html.AntiForgeryToken()
-
-                        <div class="form-horizontal">
-                            <h4>StoredProc: JoinHousehold</h4>
-                            <hr />
-                            <div class="form-group">
-                                @Html.Label("Email", new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                @Html.Label("HHId", new { @class = "control-label col-md-2" })
-                                <div class="col-md-10">
-                                    @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
-                                    @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <input type="submit" value="Join" class="btn btn-info" />
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-        </div><!-- Test Households -->
-
-        <div class="col-xs-4">
+        <div class="col-sm-4 col-xs-12">
             <div class="portlet">
                 @using (@Html.BeginForm("Add", "Household"))
                 {
@@ -51,23 +17,24 @@
                         <h4>StoredProc: AddHousehold</h4>
                         <hr />
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            @Html.Label("HHId", new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
                                 <input type="submit" value="Add" class="btn btn-info" />
                             </div>
                         </div>
@@ -76,7 +43,7 @@
             </div>
         </div>
 
-        <div class="col-xs-4">
+        <div class="col-sm-4 col-xs-12">
             <div class="portlet">
                 @using (@Html.BeginForm("Invite", "Household"))
                 {
@@ -88,23 +55,24 @@
                         @Html.HiddenFor(model => model.Id)
 
                         <div class="form-group">
-                            @Html.Label("User", new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.Label("User", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            @Html.Label("Email", new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.Label("Email", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
                                 <input type="submit" value="Invite" class="btn btn-info" />
                             </div>
                         </div>
@@ -113,7 +81,42 @@
             </div>
         </div>
 
-        <div class="col-xs-4">
+        <div class="col-sm-4 col-xs-12">
+            <div class="portlet">
+                <form action="/Household/Join" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>StoredProc: JoinHousehold</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("Email", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Join" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- Test Households -->
+        </div>
+
+        <div class="col-sm-4 col-xs-12">
             <div class="portlet">
                 @using (@Html.BeginForm("Leave", "Household"))
                 {
@@ -125,23 +128,24 @@
                         @Html.HiddenFor(model => model.Id)
 
                         <div class="form-group">
-                            @Html.Label("Email", new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.Label("Email", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            @Html.Label("HHId", new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
                                 @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
                                 <input type="submit" value="Invite" class="btn btn-info" />
                             </div>
                         </div>
@@ -149,9 +153,38 @@
                 }
             </div>
         </div>
+
+        <div class="col-sm-4 col-xs-12">
+            <div class="portlet">
+                @using (@Html.BeginForm("Users", "Household", FormMethod.Get))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <h4>StoredProc: GetHouseholdUsers</h4>
+                        <hr />
+
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.DropDownList("HouseholdId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Get Users" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
     </div>
 
 </div>
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")

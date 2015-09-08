@@ -55,5 +55,6 @@ namespace DollarsAndSense.Models
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<BudgetItems> BudgetItems { get; set; }
         public DbSet<Accounts> Accounts { get; set; }
+        public DbSet<Reconciliations> Reconciliations { get; set; }
     }
 }

@@ -10,6 +10,10 @@ namespace DollarsAndSense.Models
     { 
         public int Id { get; set; }
         public int AccountId { get; set; }
+        /// <summary>
+        /// When reconciled, this points to the reconciliation record that included this transaction
+        /// </summary>
+        public Nullable<int> ReconciliationId { get; set; }
         public int CategoryId { get; set; }
         public string UpdatedByUserId { get; set; }
         public decimal Amount { get; set; }

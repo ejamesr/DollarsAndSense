@@ -3,7 +3,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE InvitationSent
+CREATE PROCEDURE [dbo].[InvitationSent]
 	-- Add the parameters for the stored procedure here
 	@email nvarchar(max),
 	@user  nvarchar(max)
@@ -19,4 +19,5 @@ INSERT INTO [dbo].[Invitations]
            ,[ToEmail])
      VALUES
            (@user, @email)
+RETURN 35
 END

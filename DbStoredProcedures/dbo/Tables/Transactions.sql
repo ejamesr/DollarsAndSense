@@ -10,11 +10,14 @@
     [UpdatedByUserId]     NVARCHAR (128)     NULL,
     [ReconciledAmount]    DECIMAL (18, 2)    DEFAULT ((0)) NOT NULL,
     [AbsReconciledAmount] DECIMAL (18, 2)    DEFAULT ((0)) NOT NULL,
+    [ReconciliationId]    INT                NULL,
     CONSTRAINT [PK_dbo.Transactions] PRIMARY KEY CLUSTERED ([Id] ASC),
     CONSTRAINT [FK_dbo.Transactions_dbo.Accounts_AccountId] FOREIGN KEY ([AccountId]) REFERENCES [dbo].[Accounts] ([Id]) ON DELETE CASCADE,
     CONSTRAINT [FK_dbo.Transactions_dbo.AspNetUsers_UpdatedByUserId_Id] FOREIGN KEY ([UpdatedByUserId]) REFERENCES [dbo].[AspNetUsers] ([Id]),
     CONSTRAINT [FK_dbo.Transactions_dbo.Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([Id]) ON DELETE CASCADE
 );
+
+
 
 
 GO

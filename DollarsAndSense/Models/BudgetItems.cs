@@ -10,7 +10,11 @@ namespace DollarsAndSense.Models
         public int Id { get; set; }
         public string HouseholdId { get; set; }
         public int CategoryId { get; set; }
+
+        // Default budget amount for all categories
         public decimal DefaultAmount { get; set; }
+
+        // Budget amounts
         public decimal JanBudget { get; set; }
         public decimal FebBudget { get; set; }
         public decimal MarBudget { get; set; }
@@ -23,6 +27,8 @@ namespace DollarsAndSense.Models
         public decimal OctBudget { get; set; }
         public decimal NovBudget { get; set; }
         public decimal DecBudget { get; set; }
+
+        // Actuals for the specified year
         public decimal JanActual { get; set; }
         public decimal FebActual { get; set; }
         public decimal MarActual { get; set; }

@@ -9,10 +9,9 @@ namespace DollarsAndSense.ModelViews
     {
         // Info for User and Household...
         public string UserId { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
-
-        public string HousholdId { get; set; }
+        public string UserName { get; set; }
+        public string UserEmail { get; set; }
+        public string HouseholdId { get; set; }
         public string HouseholdName { get; set; }
     }
 }

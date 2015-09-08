@@ -3,7 +3,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE LeaveHousehold
+CREATE PROCEDURE [dbo].[LeaveHousehold]
 	@email nvarchar(max),
 	@householdId nvarchar(max)
 AS
@@ -16,4 +16,5 @@ BEGIN
 UPDATE [dbo].[AspNetUsers]
    SET [HouseholdId] = null
  WHERE email = @email AND HouseholdId = @householdId
+RETURN 36
 END

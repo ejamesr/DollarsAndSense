@@ -13,6 +13,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT Id, HouseholdId, Name, Email, UserName FROM AspNetUsers
-	WHERE HouseholdId = @householdId
+	SELECT u.Id as UserId, u.Name as UserName, u.Email as UserEmail, h.HouseholdId, h.Name as HouseholdName
+	FROM AspNetUsers as u
+	INNER JOIN Households as h ON u.HouseholdId = h.HouseholdId
+	WHERE u.HouseholdId = @householdId 
 END

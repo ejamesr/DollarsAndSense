@@ -1,4 +1,5 @@
-﻿using DollarsAndSense.Models;
+﻿using DollarsAndSense.Helpers;
+using DollarsAndSense.Models;
 using DollarsAndSense.ModelViews;
 using System;
 using System.Collections.Generic;
@@ -52,7 +53,7 @@ namespace DollarsAndSense.Controllers
         {
             string user = form.Get("UserId");
             string email = form.Get("Email");
-            return SqlNonQuery("InvitationSent",
+            return Sql.NonQuery("InvitationSent",
                 new SqlParameter("email", email),
                 new SqlParameter("user", user));
         }
@@ -63,34 +64,9 @@ namespace DollarsAndSense.Controllers
         {
             string id = form.Get("HouseholdId");
             string email = form.Get("Email");
-            return SqlNonQuery("LeaveHousehold",
+            return Sql.NonQuery("LeaveHousehold",
                 new SqlParameter("email", email),
                 new SqlParameter("householdId", id));
-        }
-
-        /// <summary>
-        /// Helper method to execute stored procedure
-        /// </summary>
-        /// <param name="StoreProcName"></param>
-        /// <param name="parms"></param>
-        /// <returns></returns>
-        private string SqlNonQuery(string StoredProcName, params SqlParameter[] parms)
-        {
-            using (SqlConnection cn = new SqlConnection(db.Database.Connection.ConnectionString))
-            {
-                cn.Open();
-                using (SqlCommand cmd = new SqlCommand(StoredProcName, cn))
-                {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    SqlParameter retVal = new SqlParameter();
-                    retVal.Direction = System.Data.ParameterDirection.ReturnValue;
-                    cmd.Parameters.AddRange(parms);
-                    cmd.Parameters.Add(retVal);
-                    cmd.ExecuteNonQuery();
-                    string result = "Got it: " + retVal.Value;
-                    return result;
-                }
-            }
         }
 
 
@@ -108,7 +84,7 @@ namespace DollarsAndSense.Controllers
             //    new SqlParameter("email", email),
             //    new SqlParameter("householdId", householdId));
 
-            return SqlNonQuery("JoinHousehold",
+            return Sql.NonQuery("JoinHousehold",
                 new SqlParameter("email", email),
                 new SqlParameter("householdId", householdId));
 
@@ -135,15 +111,15 @@ namespace DollarsAndSense.Controllers
         /// <summary>
         /// Get list of all users within a household
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="HouseholdId"></param>
         /// <returns></returns>
         [Route("Household/Users")]
-        public IHttpActionResult GetHouseholdUsers(string id)
+        public IHttpActionResult GetHouseholdUsers(string HouseholdId)
         {
             IEnumerable<HouseholdUser> Users;
 
             Users = db.Database.SqlQuery<HouseholdUser>("EXEC GetHouseholdUsers @householdId",
-                new SqlParameter("householdId", id));
+                new SqlParameter("householdId", HouseholdId));
             
             return Ok(Users.ToList());
         }

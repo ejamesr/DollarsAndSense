@@ -27,17 +27,17 @@ BEGIN
 
     -- Insert statements for procedure
 	UPDATE dbo.BudgetItems
-	SET Jan = CASE WHEN @Jan IS NOT NULL THEN @Jan ELSE Jan END,
-		Feb = CASE WHEN @Feb IS NOT NULL THEN @Feb ELSE Feb END,
-		Mar = CASE WHEN @Mar IS NOT NULL THEN @Mar ELSE Mar END,
-		Apr = CASE WHEN @Apr IS NOT NULL THEN @Apr ELSE Apr END,
-		May = CASE WHEN @May IS NOT NULL THEN @May ELSE May END,
-		Jun = CASE WHEN @Jun IS NOT NULL THEN @Jun ELSE Jun END,
-		Jul = CASE WHEN @Jul IS NOT NULL THEN @Jul ELSE Jul END,
-		Aug = CASE WHEN @Aug IS NOT NULL THEN @Aug ELSE Aug END,
-		Sep = CASE WHEN @Sep IS NOT NULL THEN @Sep ELSE Sep END,
-		Oct = CASE WHEN @Oct IS NOT NULL THEN @Oct ELSE Oct END,
-		Nov = CASE WHEN @Nov IS NOT NULL THEN @Nov ELSE Nov END,
-		Dec = CASE WHEN @Dec IS NOT NULL THEN @Dec ELSE Dec END
+	SET JanBudget = CASE WHEN @Jan IS NOT NULL THEN @Jan ELSE JanBudget END,
+		FebBudget = CASE WHEN @Feb IS NOT NULL THEN @Feb ELSE FebBudget END,
+		MarBudget = CASE WHEN @Mar IS NOT NULL THEN @Mar ELSE MarBudget END,
+		AprBudget = CASE WHEN @Apr IS NOT NULL THEN @Apr ELSE AprBudget END,
+		MayBudget = CASE WHEN @May IS NOT NULL THEN @May ELSE MayBudget END,
+		JunBudget = CASE WHEN @Jun IS NOT NULL THEN @Jun ELSE JunBudget END,
+		JulBudget = CASE WHEN @Jul IS NOT NULL THEN @Jul ELSE JulBudget END,
+		AugBudget = CASE WHEN @Aug IS NOT NULL THEN @Aug ELSE AugBudget END,
+		SepBudget = CASE WHEN @Sep IS NOT NULL THEN @Sep ELSE SepBudget END,
+		OctBudget = CASE WHEN @Oct IS NOT NULL THEN @Oct ELSE OctBudget END,
+		NovBudget = CASE WHEN @Nov IS NOT NULL THEN @Nov ELSE NovBudget END,
+		DecBudget = CASE WHEN @Dec IS NOT NULL THEN @Dec ELSE DecBudget END
 	WHERE Id = @Id
 END

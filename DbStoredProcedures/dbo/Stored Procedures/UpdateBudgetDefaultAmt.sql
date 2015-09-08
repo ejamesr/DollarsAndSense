@@ -3,7 +3,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE UpdateBudgetDefaultAmt
+CREATE PROCEDURE [dbo].[UpdateBudgetDefaultAmt]
 	-- Add the parameters for the stored procedure here
 	@Id int,
 	@Amt decimal
@@ -15,17 +15,17 @@ BEGIN
 
     -- Insert statements for procedure
 	UPDATE dbo.BudgetItems
-	SET Jan = @Amt,
-		Feb = @Amt,
-		Mar = @Amt,
-		Apr = @Amt,
-		May = @Amt,
-		Jun = @Amt,
-		Jul = @Amt,
-		Aug = @Amt,
-		Sep = @Amt,
-		Oct = @Amt,
-		Nov = @Amt,
-		Dec = @Amt
+	SET JanBudget = @Amt,
+		FebBudget = @Amt,
+		MarBudget = @Amt,
+		AprBudget = @Amt,
+		MayBudget = @Amt,
+		JunBudget = @Amt,
+		JulBudget = @Amt,
+		AugBudget = @Amt,
+		SepBudget = @Amt,
+		OctBudget = @Amt,
+		NovBudget = @Amt,
+		DecBudget = @Amt
 	WHERE Id = @Id
 END

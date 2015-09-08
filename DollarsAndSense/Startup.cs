@@ -20,12 +20,10 @@ namespace DollarsAndSense
             var z = CatType.Expense.Val();
             CatType newType;
             var a = CatType.E.ToEnum("Liability", out newType);
-            var b = 5;
 
             CT<CatType> testVar = new CT<CatType>();
             Array enums = Enum.GetValues(testVar.enumlist);
             Enum e = new CatType();
-            var c = 2;
         }
     }
 }

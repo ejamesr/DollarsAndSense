@@ -8,12 +8,11 @@ namespace DollarsAndSense.Models
     public class Accounts
     {
         public int Id { get; set; }
-        public string HouseholdId { get; set; }
         public string Name { get; set; }
+        public string AccountNumber { get; set; }
+        public string Description { get; set; }
         public decimal CheckbookBalance { get; set; }
         public decimal ReconciledBalance { get; set; }
-
-        //public virtual Households Household { get; set; }
-
+        public string HouseholdId { get; set; }
     }
 }

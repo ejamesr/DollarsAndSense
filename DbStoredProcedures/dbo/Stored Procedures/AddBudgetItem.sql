@@ -1,13 +1,13 @@
 ﻿-- =============================================
 -- Author:		<Author,,Name>
 -- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Description:	Add a new Budget item
 -- =============================================
-CREATE PROCEDURE [AddBudgetItem]
+CREATE PROCEDURE [dbo].[AddBudgetItem]
 	-- Add the parameters for the stored procedure here
 	@HouseholdId nvarchar(max),
 	@CategoryId int,
-	@DefaultAmt decimal = null,
+	@DefaultAmt decimal = 0,
 	@Jan decimal = null,
 	@Feb decimal = null,
 	@Mar decimal = null,
@@ -31,32 +31,45 @@ BEGIN
            ([HouseholdId]
            ,[CategoryId]
            ,[DefaultAmount]
-           ,[Jan]
-           ,[Feb]
-           ,[Mar]
-           ,[Apr]
-           ,[May]
-           ,[Jun]
-           ,[Jul]
-           ,[Aug]
-           ,[Sep]
-           ,[Oct]
-           ,[Nov]
-           ,[Dec])
+           ,[JanBudget]
+           ,[FebBudget]
+           ,[MarBudget]
+           ,[AprBudget]
+           ,[MayBudget]
+           ,[JunBudget]
+           ,[JulBudget]
+           ,[AugBudget]
+           ,[SepBudget]
+           ,[OctBudget]
+           ,[NovBudget]
+           ,[DecBudget]
+           ,[JanActual]
+           ,[FebActual]
+           ,[MarActual]
+           ,[AprActual]
+           ,[MayActual]
+           ,[JunActual]
+           ,[JulActual]
+           ,[AugActual]
+           ,[SepActual]
+           ,[OctActual]
+           ,[NovActual]
+           ,[DecActual])
      VALUES
            (@HouseholdId,
 			@CategoryId,
-			CASE WHEN @DefaultAmt IS NOT NULL THEN @DefaultAmt ELSE 0 END,
-			CASE WHEN @Jan IS NOT NULL THEN @Jan ELSE 0 END,
-			CASE WHEN @Feb IS NOT NULL THEN @Feb ELSE 0 END,
-			CASE WHEN @Mar IS NOT NULL THEN @Mar ELSE 0 END,
-			CASE WHEN @Apr IS NOT NULL THEN @Apr ELSE 0 END,
-			CASE WHEN @May IS NOT NULL THEN @May ELSE 0 END,
-			CASE WHEN @Jun IS NOT NULL THEN @Jun ELSE 0 END,
-			CASE WHEN @Jul IS NOT NULL THEN @Jul ELSE 0 END,
-			CASE WHEN @Aug IS NOT NULL THEN @Aug ELSE 0 END,
-			CASE WHEN @Sep IS NOT NULL THEN @Sep ELSE 0 END,
-			CASE WHEN @Oct IS NOT NULL THEN @Oct ELSE 0 END,
-			CASE WHEN @Nov IS NOT NULL THEN @Nov ELSE 0 END,
-			CASE WHEN @Dec IS NOT NULL THEN @Dec ELSE 0 END)
+			@DefaultAmt,
+			CASE WHEN @Jan IS NOT NULL THEN @Jan ELSE @DefaultAmt END,
+			CASE WHEN @Feb IS NOT NULL THEN @Feb ELSE @DefaultAmt END,
+			CASE WHEN @Mar IS NOT NULL THEN @Mar ELSE @DefaultAmt END,
+			CASE WHEN @Apr IS NOT NULL THEN @Apr ELSE @DefaultAmt END,
+			CASE WHEN @May IS NOT NULL THEN @May ELSE @DefaultAmt END,
+			CASE WHEN @Jun IS NOT NULL THEN @Jun ELSE @DefaultAmt END,
+			CASE WHEN @Jul IS NOT NULL THEN @Jul ELSE @DefaultAmt END,
+			CASE WHEN @Aug IS NOT NULL THEN @Aug ELSE @DefaultAmt END,
+			CASE WHEN @Sep IS NOT NULL THEN @Sep ELSE @DefaultAmt END,
+			CASE WHEN @Oct IS NOT NULL THEN @Oct ELSE @DefaultAmt END,
+			CASE WHEN @Nov IS NOT NULL THEN @Nov ELSE @DefaultAmt END,
+			CASE WHEN @Dec IS NOT NULL THEN @Dec ELSE @DefaultAmt END,
+			0,0,0,0,0,0,0,0,0,0,0,0)
 END
