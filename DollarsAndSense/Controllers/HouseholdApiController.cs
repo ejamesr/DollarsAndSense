@@ -87,25 +87,6 @@ namespace DollarsAndSense.Controllers
             return Sql.NonQuery("JoinHousehold",
                 new SqlParameter("email", email),
                 new SqlParameter("householdId", householdId));
-
-            //string result;
-            //using (SqlConnection cn = new SqlConnection(db.Database.Connection.ConnectionString))
-            //{
-            //    cn.Open();
-            //    using (SqlCommand cmd = new SqlCommand(, cn))
-            //    {
-            //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            //        SqlParameter[] parms = { new SqlParameter("email", email),
-            //                           new SqlParameter("householdId", householdId)};
-            //        SqlParameter retVal = new SqlParameter();
-            //        retVal.Direction = System.Data.ParameterDirection.ReturnValue;
-            //        cmd.Parameters.AddRange(parms);
-            //        cmd.Parameters.Add(retVal);
-            //        cmd.ExecuteNonQuery();
-            //        result = "Got it: " + retVal.Value;
-            //    }
-            //}
-            //return result;
         }
 
         /// <summary>

@@ -27,14 +27,14 @@
     [OctActual]     DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
     [NovActual]     DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
     [DecActual]     DECIMAL (18, 2) DEFAULT ((0)) NOT NULL,
-    CONSTRAINT [PK_dbo.BudgetItems] PRIMARY KEY CLUSTERED ([Id] ASC),
-    CONSTRAINT [FK_dbo.BudgetItems_dbo.Categories_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([Id]) ON DELETE CASCADE
+    CONSTRAINT [PK_dbo.BudgetItems] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
 
 
 
+
+
 GO
-CREATE NONCLUSTERED INDEX [IX_CategoryId]
-    ON [dbo].[BudgetItems]([CategoryId] ASC);
+
 

@@ -63,6 +63,11 @@ namespace DollarsAndSense
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+
+            //string name = CatTypes.NetWorth;
+            //string[] names = CatTypes.ToList();
+            //string x = CatTypes.Expense;
         }
     }
 }

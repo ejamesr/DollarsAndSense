@@ -1,3 +1,6 @@
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.dll.config
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.pdb
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\Antlr3.Runtime.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\EntityFramework.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\EntityFramework.SqlServer.dll
@@ -16,6 +19,8 @@ C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\b
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\Newtonsoft.Json.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\Owin.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\SendGrid.SmtpApi.dll
+C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\SendGridMail.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\System.Net.Http.Formatting.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\System.Web.Helpers.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\System.Web.Http.dll
@@ -57,11 +62,6 @@ C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\b
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\System.Web.Http.Owin.xml
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\obj\Debug\DollarsAndSense.Migrations.InitialMigration.resources
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\obj\Debug\DollarsAndSense.csproj.GenerateResource.Cache
-C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.dll.config
-C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.dll
-C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\DollarsAnd$ense.pdb
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\obj\Debug\DollarsAnd$ense.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\obj\Debug\DollarsAnd$ense.pdb
-C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\SendGrid.SmtpApi.dll
-C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\bin\SendGridMail.dll
 C:\Users\ejame_000\Documents\Bootcamp\Projects\DollarsAndSense\DollarsAndSense\obj\Debug\DollarsAndSense.csprojResolveAssemblyReference.cache

@@ -51,13 +51,42 @@ namespace DollarsAndSense.Controllers
 
         public ActionResult TestBudgets()
         {
+            // Preload Update function with data from this id...
+            int id = 2;
+            ViewBag.Id = id;
+            var rec = db.BudgetItems.Find(id);
+            BudgetItemsView data = new BudgetItemsView();
+            data.Id = rec.Id;
+            data.HouseholdId = rec.HouseholdId;
+            data.JanBudget = rec.JanBudget.ToString();
+            data.FebBudget = rec.FebBudget.ToString();
+            data.MarBudget = rec.MarBudget.ToString();
+            data.AprBudget = rec.AprBudget.ToString();
+            data.MayBudget = rec.MayBudget.ToString();
+            data.JunBudget = rec.JunBudget.ToString();
+            data.JulBudget = rec.JulBudget.ToString();
+            data.AugBudget = rec.AugBudget.ToString();
+            data.SepBudget = rec.SepBudget.ToString();
+            data.OctBudget = rec.OctBudget.ToString();
+            data.NovBudget = rec.NovBudget.ToString();
+            data.DecBudget = rec.DecBudget.ToString();
+            ViewBag.ToUpdate = data;
+            
             ViewBag.Title = "Test budgets!";
-            return View();
+            BudgetItemsView view = new BudgetItemsView();
+            ViewBag.HouseholdId = new SelectList(db.Households, "HouseholdId", "Name");
+            return View(view);
         }
 
         public ActionResult TestTransactions()
         {
             ViewBag.Title = "Test transactions!";
+            return View();
+        }
+
+        public ActionResult TestCategories()
+        {
+            ViewBag.Title = "Test categories!";
             return View();
         }
 

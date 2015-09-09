@@ -3,7 +3,7 @@
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE RemoveBudgetItem
+CREATE PROCEDURE [dbo].[RemoveBudgetItem]
 	-- Add the parameters for the stored procedure here
 	@Id int
 AS
@@ -14,4 +14,5 @@ BEGIN
 
     -- Insert statements for procedure here
 	DELETE FROM BudgetItems WHERE Id = @Id
+	RETURN 52
 END

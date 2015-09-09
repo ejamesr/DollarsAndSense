@@ -108,5 +108,8 @@
     <Build Include="dbo\Stored Procedures\AddTransaction.sql" />
     <Build Include="dbo\Tables\Reconciliations.sql" />
     <Build Include="dbo\Stored Procedures\GetAccountsForHousehold.sql" />
+    <Build Include="dbo\Stored Procedures\GetBudgetInfo.sql" />
+    <Build Include="dbo\Stored Procedures\GetBudgetsForHousehold.sql" />
+    <Build Include="dbo\Stored Procedures\AddCategory.sql" />
   </ItemGroup>
 </Project>

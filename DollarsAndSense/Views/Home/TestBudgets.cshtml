@@ -1,0 +1,408 @@
+﻿@using DollarsAndSense.ModelViews;
+@model DollarsAndSense.ModelViews.BudgetItemsView
+
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Testing BudgetItems</h2>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-8 col-xs-12"><!-- /Budget/Add -->
+            <div class="portlet">
+                <form action="/Budget/Add" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <h4>StoredProc: AddBudgetItem</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.HouseholdId, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("CatId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.CategoryId, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("Default Amt", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.DefaultAmount, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <!-- Display 12 months -->
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jan", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.JanBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jul", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.JulBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Feb", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.FebBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Aug", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.AugBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Mar", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.MarBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Sep", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.SepBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Apr", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.AprBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Oct", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.OctBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("May", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.MayBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Nov", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.NovBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jun", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.JunBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Dec", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.EditorFor(model => model.DecBudget, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Add" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /Budget/Add -->
+
+        <div class="col-sm-4 col-xs-12"><!-- /Budget/Remove (delete item) -->
+            <div class="portlet">
+                <form action="/Budget/Remove" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>StoredProc: RemoveBudgetItem</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("Id", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.TextBox("Id", 0, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Remove" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /Budget/Remove (delete item) -->
+
+        <div class="col-sm-4 col-xs-12"><!-- /Budget (get info) -->
+            <div class="portlet">
+                <form action="/Budget" method="get">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        <h4>StoredProc: GetBudgetInfo</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("Id", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.TextBox("Id", 0, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Get Info" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /Budget (get info) -->
+
+        <div class="col-sm-4 col-xs-12"><!-- /Budget/Household (get info) -->
+            <div class="portlet">
+                <form action="/Budget/Household" method="get">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <h4>StoredProc: GetBudgetsForHousehold</h4>
+                        <hr />
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.DropDownList("HouseholdId", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.HouseholdId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Get Info" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /Budget/Household (get info) -->
+
+        @{
+            BudgetItemsView data = ViewBag.ToUpdate;
+        }
+        <div class="col-sm-8 col-xs-12"><!-- /Budget/Update -->
+            <div class="portlet">
+                <form action="/Budget/Update" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="form-horizontal">
+                        <h4>StoredProc: UpdateBudgetMonths</h4>
+                        <hr />
+                        @Html.Hidden("Id", data.Id)
+                        <div class="form-group">
+                            @Html.Label("HHId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.TextBox("HouseholdId", data.HouseholdId, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.Label("CatId", new { @class = "control-label col-xs-3" })
+                            <div class="col-xs-9">
+                                @Html.EditorFor(model => model.CategoryId, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        @Html.Hidden("DefaultAmount", data.DefaultAmount)
+
+                        <!-- Display 12 months -->
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jan", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("JanBudget", data.JanBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jul", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("JulBudget", data.JulBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Feb", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("FebBudget", data.FebBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Aug", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("AugBudget", data.AugBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Mar", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("MarBudget", data.MarBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Sep", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("SepBudget", data.SepBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Apr", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("AprBudget", data.AprBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Oct", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("OctBudget", data.OctBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("May", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("MayBudget", data.MayBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Nov", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("NovBudget", data.NovBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Jun", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("JunBudget", data.JunBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    @Html.Label("Dec", new { @class = "control-label col-xs-3" })
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("DecBudget", data.DecBudget, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-xs-3"></div>
+                            <div class="col-xs-9">
+                                <input type="submit" value="Update" class="btn btn-info" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /Budget/Update -->
+
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

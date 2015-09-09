@@ -15,15 +15,15 @@ namespace DollarsAndSense
         {
             ConfigureAuth(app);
             // Do some code here to test things...
-            var x = CatType.E.ToList();
-            var y = CatType.Expense.ToString();
-            var z = CatType.Expense.Val();
-            CatType newType;
-            var a = CatType.E.ToEnum("Liability", out newType);
+            //var x = CatType.E.ToList();
+            //var y = CatType.Expense.ToString();
+            //var z = CatType.Expense.Val();
+            //CatType newType;
+            //var a = CatType.E.ToEnum("Liability", out newType);
 
-            CT<CatType> testVar = new CT<CatType>();
-            Array enums = Enum.GetValues(testVar.enumlist);
-            Enum e = new CatType();
+            //CT<CatType> testVar = new CT<CatType>();
+            //Array enums = Enum.GetValues(testVar.enumlist);
+            //Enum e = new CatType();
         }
     }
 }

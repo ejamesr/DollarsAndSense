@@ -43,6 +43,6 @@ namespace DollarsAndSense.Models
         public decimal DecActual { get; set; }
 
         //public virtual Households Household { get; set; }
-        public virtual Categories Category { get; set; }
+        //public virtual Categories Category { get; set; }
     }
 }
