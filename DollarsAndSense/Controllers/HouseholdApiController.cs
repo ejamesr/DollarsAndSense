@@ -41,10 +41,10 @@ namespace DollarsAndSense.Controllers
         public IEnumerable<Households> PostHouseholdAdd(FormDataCollection form)
         {
             string name = form.Get("Name");
-            string house = form.Get("householdid");
-            return db.Database.SqlQuery<Households>("EXEC AddHousehold @name, @householdId",
-                new SqlParameter("name", name),
-                new SqlParameter("householdId", house));
+            string house = form.Get("HouseholdId");
+            return db.Database.SqlQuery<Households>("EXEC AddHousehold @householdId, @name",
+                new SqlParameter("householdId", house),
+                new SqlParameter("name", name));
         }
 
         [Route("Household/Invite")]

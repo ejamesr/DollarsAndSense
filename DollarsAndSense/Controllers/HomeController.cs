@@ -17,15 +17,6 @@ namespace DollarsAndSense.Controllers
             return View();
         }
 
-        public ActionResult TestHouseholds()
-        {
-            TestHouseholdsModel model = new TestHouseholdsModel();
-            model.Households = new SelectList(db.Households, "HouseholdId", "Name");
-            ViewBag.HouseholdId = model.Households;
-            ViewBag.Title = "Test households!";
-            return View();
-        }
-
         public ActionResult TestAccounts()
         {
 
@@ -78,15 +69,24 @@ namespace DollarsAndSense.Controllers
             return View(view);
         }
 
-        public ActionResult TestTransactions()
-        {
-            ViewBag.Title = "Test transactions!";
-            return View();
-        }
-
         public ActionResult TestCategories()
         {
             ViewBag.Title = "Test categories!";
+            return View();
+        }
+
+        public ActionResult TestHouseholds()
+        {
+            TestHouseholdsModel model = new TestHouseholdsModel();
+            model.Households = new SelectList(db.Households, "HouseholdId", "Name");
+            ViewBag.HouseholdId = model.Households;
+            ViewBag.Title = "Test households!";
+            return View();
+        }
+
+        public ActionResult TestTransactions()
+        {
+            ViewBag.Title = "Test transactions!";
             return View();
         }
 

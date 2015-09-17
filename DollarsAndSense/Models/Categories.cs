@@ -32,7 +32,6 @@ namespace DollarsAndSense.Models
 
         public static string[] ToList() { return t; }
     }
-    //public static class ExtendEnum<CatType>{};
 
     public class Categories
     {
@@ -48,17 +47,61 @@ namespace DollarsAndSense.Models
         }
     }
 
-    //public class CT<T>
-    //{
-    //    public T tType;
-    //    public Enum tt;
-    //    public string[] tlist = null;
-    //    public Type enumlist = typeof(T);
-        
-    //    public CT()
-    //    {
-    //        string[] names = Enum.GetNames(typeof(T));
-    //        tlist = names;
-    //    }
-    //}
+    /*
+     * List of Categories to Seed
+     * 
+     * Asset
+     * =====
+     * Home
+     * Autos
+     * Furniture
+     * Other
+     * 
+     * Debt
+     * ====
+     * CreditCard 1
+     * CreditCard 2
+     * Auto Loan
+     * Home Loan
+     * 
+     * Income
+     * ======
+     * Paycheck
+     * Consulting
+     * Tax Refund
+     * Other
+     * 
+     * Expense
+     * =======
+     * Allowance
+     * Auto - Fuel
+     * Auto - Maintenance
+     * Birthdays
+     * Business
+     * Charity
+     * Clearing
+     * Clothing
+     * Credit Card
+     * Dental
+     * Entertainment
+     * Groceries
+     * Home Maintenance
+     * Gifts
+     * HOA
+     * Insurance - Health
+     * Insurance - Home
+     * Insurance - Auto
+     * Loan Repayment
+     * Medical
+     * Miscellaneous
+     * Other
+     * Personal Care
+     * Rent
+     * School
+     * Supplies
+     * To Be Reimbursed
+     * Utilities
+     * Vacation
+     * 
+     * */
 }

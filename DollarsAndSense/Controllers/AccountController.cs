@@ -16,9 +16,11 @@ using Microsoft.Owin.Security.OAuth;
 using DollarsAndSense.Models;
 using DollarsAndSense.Providers;
 using DollarsAndSense.Results;
+using System.Web.Http.Description;
 
 namespace DollarsAndSense.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
